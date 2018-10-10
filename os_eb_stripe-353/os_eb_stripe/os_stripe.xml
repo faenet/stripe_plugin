@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install version="1.0" type="plugin" group="payment">
+	<name>os_stripe</name>
+	<title>Stripe</title>
+	<author>Tuan Pham Ngoc</author>
+	<creationDate>07-01-2016</creationDate>
+	<copyright>Copyright 2010-2016 Ossolution Team</copyright>
+	<license>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU/GPL version 2</license>
+	<authorEmail>contact@joomdonation.com</authorEmail>
+	<authorUrl>www.joomdonation.com</authorUrl>
+	<version>3.5.0</version>
+	<description>Stripe Payment Plugin For Events Booking Extension</description>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_eventbooking/elements">
+				<field name="stripe_public_key" type="text" size="60" label="Public API Key" description="API Key" default=""></field>
+				<field name="stripe_api_key" type="text" size="60" label="Secret API Key" description="API Key" default=""></field>
+				<field name="icon" type="text" size="40" label="Icon" description="If you want to show icon instead of payment method title on registration form, upload it to media/com_eventbooking/assets/images/paymentmethods folder and enter the name of the file here. For example os_stripe.png" default=""></field>
+				<field name="payment_fee_amount" type="text" label="Payment Processing Fee ($)" description=""></field>
+				<field name="payment_fee_percent" type="text" label="Payment Processing Fee (%)" description=""></field>
+				<field
+						name="use_stripe_card_element"
+						type="radio"
+						label="Use Stripe Card Element"
+						description="Set to Yes to use Stripe Card Element (https://stripe.com/docs/stripe-js/elements/quickstart) to render credit card input form. Only works with Membership Pro 2.14.1+"
+						class="btn-group btn-group-yesno"
+						default="0"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+	<files>
+		<filename>os_stripe.php</filename>
+	</files>
+</install>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install version="1.0" type="plugin" group="payment">
+	<name>os_stripe</name>
+	<title>Stripe</title>
+	<author>Tuan Pham Ngoc</author>
+	<creationDate>07-01-2016</creationDate>
+	<copyright>Copyright 2010-2016 Ossolution Team</copyright>
+	<license>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU/GPL version 2</license>
+	<authorEmail>contact@joomdonation.com</authorEmail>
+	<authorUrl>www.joomdonation.com</authorUrl>
+	<version>2.3.0</version>
+	<description>Stripe Payment Plugin For Events Booking Extension</description>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_eventbooking/elements">
+				<field name="stripe_public_key" type="text" size="60" label="Public API Key" description="API Key" default=""></field>
+				<field name="stripe_api_key" type="text" size="60" label="Secret API Key" description="API Key" default=""></field>
+				<field name="payment_fee_amount" type="text" label="Payment Processing Fee ($)" description=""></field>
+				<field name="payment_fee_percent" type="text" label="Payment Processing Fee (%)" description=""></field>
+			</fieldset>
+		</fields>
+	</config>
+	<files>
+		<filename>os_stripe.php</filename>
+	</files>
+</install>
